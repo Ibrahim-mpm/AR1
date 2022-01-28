@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="editTextTextPersonName" type="id"></item>
+    <item name="registertitle" type="id"></item>
+    <item name="Name" type="id"></item>
+    <item name="password" type="id"></item>
+    <item name="Mobile" type="id"></item>
+    <item name="Email" type="id"></item>
+    <item name="register" type="id"></item>
+    <item name="editTextTextPersonName2" type="id"></item>
+    <item name="editTextTextPersonName3" type="id"></item>
+    <item name="editTextTextPersonName5" type="id"></item>
+</resources>

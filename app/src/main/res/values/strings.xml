@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">AR3</string>
+    <string name="login">login</string>
+    <string name="register">register</string>
+    <string name="or">or</string>
+    <string name="existing_user">existing_user</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="welcome_folks">welcome_folks</string>
+    <string name="measure_new_item">measure_new_item</string>
+    <string name="view_saved_items">view_saved_items</string>
+    <string name="logout">logout</string>
+    <string name="registration">registration</string>
+    <string name="name">name</string>
+    <string name="mobile_no">mobile_no</string>
+    <string name="email">email</string>
+    <string name="registerpage">registerpage</string>
+    <string name="sorry_no_items_are_available">sorry_no_items_are_available</string>
+    <string name="go_back">go_back</string>
+</resources>
