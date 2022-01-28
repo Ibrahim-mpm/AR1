@@ -2,6 +2,7 @@ package com.example.ar3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -13,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
     }
 
     public void btnlogin(View view) {
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnMeasure(View view) {
-        setContentView(R.layout.measure);
+        Intent intent= new Intent(MainActivity.this,Measure.class);
+        startActivity(intent);
     }
 }

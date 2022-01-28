@@ -64,7 +64,6 @@ public class Measure extends AppCompatActivity {
                 (HitResult hitResult, Plane plane, MotionEvent motionEvent) -> {
                     if (previousAnchorNode != null) {
                         Toast.makeText(getBaseContext()," Clear All before placing new objects", Toast.LENGTH_LONG).show();
-
                         return;
                     }
                     if (currentAnchorNode != null) {
