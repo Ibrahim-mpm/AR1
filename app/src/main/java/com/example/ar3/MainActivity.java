@@ -10,6 +10,8 @@ import com.example.ar3.R;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +42,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void btnback(View view) {
+        setContentView(R.layout.measure);
+    }
+
     public void btnMeasure(View view) {
         Intent intent= new Intent(MainActivity.this,Measure.class);
         startActivity(intent);
     }
+
+
 }

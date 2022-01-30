@@ -3,11 +3,13 @@ package com.example.ar3;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.ar.core.Anchor;
@@ -29,6 +31,8 @@ public class Measure extends AppCompatActivity {
     private TransformableNode currenTransformableNode = null;
     private TransformableNode previousTransformableNode = null;
     private Button clearall;
+    public float outputvalue=0;
+    public float breadthvalue=0;
 
     ArFragment arFragment1;
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -44,6 +48,12 @@ public class Measure extends AppCompatActivity {
                 if ((currenTransformableNode != null) && (previousAnchorNode != null)) {
                     Vector3 difference = Vector3.subtract(currenTransformableNode.getWorldPosition(), previousTransformableNode.getWorldPosition());
                     Toast.makeText(getBaseContext(),"Distance Between the Two objects is : " + difference.length()  + " metres", Toast.LENGTH_LONG).show();
+                    if(outputvalue == 0){
+                        outputvalue = difference.length();
+                    }else{
+                        breadthvalue =  difference.length();
+                    }
+
                 }
             }
         });
@@ -113,6 +123,24 @@ public class Measure extends AppCompatActivity {
             previousAnchorNode = null;
         }
     }
+
+    public void btnsave(View view) {
+
+        if(outputvalue == 0 ){
+            Toast.makeText(getBaseContext(),"The measurement is zero. Please take a valid measurement ", Toast.LENGTH_LONG).show();
+        }else{
+            setContentView(R.layout.output);
+            TextView myAwesomeTextView = (TextView)findViewById(R.id.result);
+            myAwesomeTextView.setText("" +outputvalue);
+            TextView myAwesomeTextView2 = (TextView)findViewById(R.id.result2);
+            myAwesomeTextView2.setText("" +breadthvalue);
+        }
+
+
+    }
+
+
+
 }
 
 
